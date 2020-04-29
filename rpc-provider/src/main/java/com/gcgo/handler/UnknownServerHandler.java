@@ -1,6 +1,6 @@
 package com.gcgo.handler;
 
-import com.gcgo.ioc.container.IocContainer;
+import com.gcgo.ioc.SpringApplication;
 import com.gcgo.serial.RpcRequest;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -13,7 +13,7 @@ import java.util.Map;
  */
 public class UnknownServerHandler extends ChannelInboundHandlerAdapter {
     //ioc容器
-    private Map<String, Object> ioc = IocContainer.getIoc();
+    private Map<String, Object> ioc = SpringApplication.getIoc();
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
