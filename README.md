@@ -210,7 +210,9 @@
 
    运行BootStrap.main()启动服务端，运行ClientBootstrap.main()启动客户端，客户端模拟每隔1500ms发送一次请求，调用UserService.sayHello("success");
 
-   结果详见：**验证资料**
+   结果详见：[**验证资料**](https://gitee.com/gcgo/netty-rpc/tree/master/%E9%AA%8C%E8%AF%81%E8%B5%84%E6%96%99)
+
+
 
    
 
