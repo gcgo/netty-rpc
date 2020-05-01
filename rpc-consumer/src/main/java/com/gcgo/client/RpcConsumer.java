@@ -1,4 +1,4 @@
-package com.gcgo.test.client;
+package com.gcgo.client;
 
 import com.gcgo.serial.RpcRequest;
 

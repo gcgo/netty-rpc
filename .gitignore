@@ -3,3 +3,4 @@
 /rpc-consumer/src/main/java/com/gcgo/client/RpcConsumerOld.java
 /rpc-consumer/src/main/java/com/gcgo/client/ClientBootstrapOld.java
 /rpc-consumer/src/main/java/com/gcgo/client/ClientBootstrap2.java
+/rpc-provider/src/main/java/com/gcgo/ioc/SpringApplication2.java

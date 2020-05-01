@@ -13,6 +13,7 @@ public class RpcEncoder extends MessageToByteEncoder {
         this.serializer = serializer;
     }
 
+    @Override
     protected void encode(ChannelHandlerContext channelHandlerContext, Object msg, ByteBuf byteBuf) throws Exception {
         if (clazz != null && clazz.isInstance(msg)) {
             byte[] bytes = serializer.serialize(msg);
@@ -21,4 +22,14 @@ public class RpcEncoder extends MessageToByteEncoder {
             System.out.println("编码器运行了");
         }
     }
+
+    //    protected void encode(ChannelHandlerContext channelHandlerContext, Object msg, ByteBuf byteBuf) throws Exception {
+    //        if (clazz != null && clazz.isInstance(msg)) {
+    //            byte[] bytes = serializer.serialize(msg);
+    //            byteBuf.writeInt(bytes.length);
+    //            byteBuf.writeBytes(bytes);
+    //            System.out.println("编码器运行了");
+    //        }
+    //    }
+
 }

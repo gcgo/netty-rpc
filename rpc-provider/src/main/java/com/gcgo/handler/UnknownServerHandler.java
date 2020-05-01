@@ -17,6 +17,7 @@ public class UnknownServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+        System.out.println(Thread.currentThread().getName());
         //判断是否符合约定，符合则调用本地方法，返回数据
         //msg是约定的协议格式
         //msg:UserService#sayHello#are you ok?==========>以前版本

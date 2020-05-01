@@ -51,9 +51,9 @@ public class UserServiceImpl implements UserService {
             e.printStackTrace();
         } finally {
             // 优雅退出 释放线程池资源
+            System.out.println("服务器优雅的释放了线程资源...");
             bossGroup.shutdownGracefully();
             workerGroup.shutdownGracefully();
-            System.out.println("服务器优雅的释放了线程资源...");
         }
 
     }

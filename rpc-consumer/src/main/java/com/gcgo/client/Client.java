@@ -1,4 +1,4 @@
-package com.gcgo.test.client;
+package com.gcgo.client;
 
 import com.gcgo.serial.RpcEncoder;
 import com.gcgo.serial.RpcRequest;
@@ -69,6 +69,11 @@ public class Client extends ChannelInboundHandlerAdapter {
 //            }
             return response;
         } finally {
+            //切记！！！！！！！！！！！！
+            //优雅关闭是建立在前面cf.channel().writeAndFlush(request).sync();阻塞的前提下
+            //要是不阻塞就直接优雅关闭，Handler中方法会一直wait，请求也不会发到服务端！！！！！！！！
+            //切记！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+            System.out.println("优雅关闭");
             group.shutdownGracefully();
         }
 
